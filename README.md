@@ -1,24 +1,36 @@
-# README
+# アプリ名
+Anniversary Reminder
+# 概要(このアプリでできることを書いて下さい)
+# 制作背景(意図)
+# DEMO(gifで動画や写真を貼って、ビューのイメージを掴んでもらいます)
+# 実装予定の内容
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Anniversary Reminder テーブル設計
 
-Things you may want to cover:
+## users テーブル
 
-* Ruby version
+| Column             | Type       | Options                   |
+| ------------------ | ---------- | ------------------------- |
+| name               | string     | null: false               |
+| birth_date         | date       | null: false               |
+| email              | string     | null: false, unique: true |
+| encrypted_password | string     | null: false               |
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :events
 
-* Database creation
+## events テーブル
 
-* Database initialization
+| Column             | Type       | Options                   |
+| ------------------ | ---------- | ------------------------- |
+| name               | string     | null: false               |
+| gender_id          | integer    | null: false               |
+| anniversary_date   | date       | null: false               |
+| category_id        | integer    | null: false               |
+| anniversary_name   | string     |                           |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- belongs_to :user

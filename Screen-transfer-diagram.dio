@@ -1,0 +1,59 @@
+<mxfile host="65bd71144e">
+    <diagram id="xoH9y5_mHgNs-e37A60J" name="ページ1">
+        <mxGraphModel dx="862" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="トップページ" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="320" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endSize=12;startArrow=classic;startFill=1;startSize=12;fontSize=15;" edge="1" parent="1" source="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="520" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=12;startArrow=classic;startFill=1;startSize=12;fontSize=15;" edge="1" parent="1" source="7" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="サインアップ&lt;br style=&quot;font-size: 15px;&quot;&gt;ページ" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="120" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endSize=12;startArrow=classic;startFill=1;startSize=12;fontSize=15;" edge="1" parent="1" source="9" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="サインイン&lt;br style=&quot;font-size: 15px;&quot;&gt;ページ" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="120" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=15;startArrow=classic;startFill=1;startSize=12;endSize=12;" edge="1" parent="1" source="11" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="イベント登録&lt;br style=&quot;font-size: 15px;&quot;&gt;ページ" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="120" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;startArrow=classic;startFill=1;startSize=12;endSize=12;" edge="1" parent="1" source="13" target="20">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="イベント情報&lt;br style=&quot;font-size: 15px;&quot;&gt;編集ページ" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="340" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;startSize=12;endSize=12;fontSize=15;" edge="1" parent="1" source="15" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="ユーザー情報&lt;br style=&quot;font-size: 15px;&quot;&gt;編集ページ" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="120" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;startSize=12;endSize=12;fontSize=15;" edge="1" parent="1" source="20" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="マイページ&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;･ユーザー情報詳細&lt;br style=&quot;font-size: 15px;&quot;&gt;･イベント情報詳細" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="320" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Anniversary Reminder　画面遷移図" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=27;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="440" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

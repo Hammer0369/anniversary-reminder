@@ -30,8 +30,7 @@ Anniversary Reminder
 | anniversary_date   | date       | null: false               |
 | category_id        | integer    | null: false               |
 | anniversary_name   | string     |                           |
-|    | string     |                           |
-
+| user               | references | foreign_key: true         |
 ### Association
 
 - belongs_to :user

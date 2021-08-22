@@ -1,0 +1,51 @@
+<h2>記念日の情報を入力</h2>
+<%= form_with model: @event, local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+
+<div class="">
+  <div class="">
+    相手の名前
+    <span class="">必須</span>
+  </div>
+  <%= f.text_field :name, class:"", id:"", placeholder:"" %>
+
+  <div class="">
+    相手の性別
+    <span class="">必須</span>
+  </div>
+  <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"", id:""}) %>
+
+  <div class="">
+    生年月日
+    <span class="">必須</span>
+    <%= raw sprintf(
+              f.date_select(
+                :anniversary_date,
+                #class:'select-birth',
+                #id:"birth-date",
+                use_month_numbers: true,
+                prompt:'---',
+                start_year: (Time.now.year - 150),
+                end_year: (Time.now.year),
+                date_separator: '%s'),
+              "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+  </div>
+
+  <div class="">
+    カテゴリー
+    <span class="">必須</span>
+  </div>
+  <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"", id:""}) %>
+
+  <div class="">
+    記念日名
+    <span class="">必須</span>
+  </div>
+  <%= f.text_field :anniversary_name, class:"", id:"", placeholder:"" %>
+</div>
+
+<div class="">
+  <%= f.submit "登録する" ,class:"" %>
+  <%=link_to 'もどる', root_path, class:"" %>
+</div>
+<% end %>

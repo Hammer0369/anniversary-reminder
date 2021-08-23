@@ -21,6 +21,7 @@ end
 private
 
 def event_params
-  params.require(:event).permit(:name, :gender_id, :anniversary_date, :category_id, :anniversary_name)
+  params.require(:event).permit(:last_name, :first_name, :last_name_kana, :first_name_kana,
+                                :gender_id, :anniversary_date, :category_id, :anniversary_name)
                         .merge(user_id: current_user.id)
 end

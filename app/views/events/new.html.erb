@@ -1,0 +1,59 @@
+<h2>記念日の情報を入力</h2>
+<%= form_with model: @event, local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+
+<div class="">
+  <div class="">
+    相手の名前（全角）
+    <span class="">必須</span>
+  </div>
+  <%= f.text_field :last_name, autofocus: true, class:"", id:"", placeholder:"例）山田" %>
+  <%= f.text_field :first_name, class:"", id:"", placeholder:"例）花子" %>
+
+  <div class="">
+    相手の名前かな（全角）
+    <span class="">必須</span>
+  </div>
+  <%= f.text_field :last_name_kana, class:"", id:"", placeholder:"例）やまだ" %>
+  <%= f.text_field :first_name_kana, class:"", id:"", placeholder:"例）はなこ" %>
+
+  <div class="">
+    相手の性別
+    <span class="">必須</span>
+  </div>
+  <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"", id:""}) %>
+
+  <div class="">
+    記念日の種類
+    <span class="">必須</span>
+  </div>
+  <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"", id:""}) %>
+
+  <div class="">
+    記念日の名前
+    <span class="">任意</span>
+  </div>
+  <%= f.text_field :anniversary_name, class:"", id:"", placeholder:"「その他の記念日」選択の場合など" %>
+
+  <div class="">
+    記念日
+    <span class="">必須</span>
+  </div>
+  <%= raw sprintf(
+            f.date_select(
+              :anniversary_date,
+              class:"",
+              id:"",
+              use_month_numbers: true,
+              prompt:'---',
+              start_year: (Time.now.year - 150),
+              end_year: (Time.now.year),
+              date_separator: '%s'),
+            "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+</div>
+
+<div class="">
+  <%= f.submit "記念日を登録" ,class:"" %>
+  <%=link_to 'もどる', root_path, class:"" %>
+</div>
+<% end %>

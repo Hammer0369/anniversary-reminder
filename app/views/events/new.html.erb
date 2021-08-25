@@ -1,6 +1,6 @@
 <h2>記念日の情報を入力</h2>
 <%= form_with model: @event, local: true do |f| %>
-<%= render 'shared/error_messages', model: f.object %>
+<%= render 'layouts/error_messages', model: f.object %>
 
 <div class="">
   <div class="">
@@ -53,7 +53,7 @@
 </div>
 
 <div class="">
-  <%= f.submit "記念日を登録" ,class:"" %>
+  <%= f.submit "イベント登録" ,class:"" %>
   <%=link_to 'もどる', root_path, class:"" %>
 </div>
 <% end %>

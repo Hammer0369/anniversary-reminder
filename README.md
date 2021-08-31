@@ -55,7 +55,10 @@
 
 | Column             | Type       | Options                   |
 | ------------------ | ---------- | ------------------------- |
-| name               | string     | null: false               |
+| last_name          | string     | null: false               |
+| first_name         | string     | null: false               |
+| last_name_kana     | string     | null: false               |
+| first_name_kana    | string     | null: false               |
 | gender_id          | integer    | null: false               |
 | anniversary_date   | date       | null: false               |
 | category_id        | integer    | null: false               |

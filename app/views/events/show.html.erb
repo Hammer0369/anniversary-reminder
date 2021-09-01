@@ -1,0 +1,37 @@
+<h2>記念日の情報</h2>
+<div class=''>
+  <h6 class=''>
+    <%= @event.last_name_kana %> <%= @event.first_name_kana %>
+  </h6>
+</div>
+
+<div class=''>
+  <h3 class=''>
+    <%= @event.last_name %> <%= @event.first_name %> 
+  </h3>
+</div>
+
+<div class=''>
+  <h4 class=''>
+    <%= @event.gender.name %>
+  </h3>
+</div>
+
+<div class=''>
+  <h3 class=''>
+    <% if @event.anniversary_name.present? %>
+      <%= @event.anniversary_name%>
+    <% else %>
+      <%= @event.category.name %>
+    <% end %>
+  </h3>
+
+  <h3 class=''>
+    <%= @event.anniversary_date.year %>年
+    <%= @event.anniversary_date.month %>月
+    <%= @event.anniversary_date.day %>日
+  </h3>
+</div>
+
+<%= link_to "編集", root_path, method: :get, class: '' %>
+<%= link_to "削除", root_path, method: :delete, class: '' %>

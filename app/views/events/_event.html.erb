@@ -18,19 +18,11 @@
 
         <div class=''>
           <h4 class=''>
-          <% if event.category_id == 2 %>
-            誕生日
-          <% elsif event.category_id == 3 %>
-            結婚記念日
-          <% elsif event.category_id == 4 %>
-            交際開始日
-          <% elsif event.category_id == 5 %>
             <% if event.anniversary_name.present? %>
               <%= event.anniversary_name %>
             <% else %>
-              その他の記念日
+              <%= event.category.name %>
             <% end %>
-          <% end %>
             <%= event.anniversary_date.year %>年
             <%= event.anniversary_date.month %>月
             <%= event.anniversary_date.day %>日

@@ -11,7 +11,11 @@
       </tr>
       <tr>
         <th class="table__col1">誕生日</th>
-        <td class="table__col2"><%= "#{@user.birth_date}" %></td>
+        <td class="table__col2">
+          <%= "#{@user.birth_date.year}年" %>
+          <%= "#{@user.birth_date.month}月" %>
+          <%= "#{@user.birth_date.day}日" %>
+        </td>
       </tr>
       <tr>
         <th class="table__col1">メールアドレス</th>
@@ -20,6 +24,7 @@
     </tbody>
   </table>
 
-  
+  <%= link_to "編集", edit_user_path, method: :get, class: '' %>
+  <%= link_to 'もどる', root_path, method: :get, class: '' %>
 </div>
 

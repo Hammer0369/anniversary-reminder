@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, except: :update
+  before_action :set_user
 
   def show
   end
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_params)
+    if @user.update(user_params)
       redirect_to user_path
     else
       render :edit

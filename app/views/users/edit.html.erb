@@ -1,6 +1,6 @@
 <h2>ユーザー情報の変更</h2>
 
-<%= form_with model: @user, id: 'edit_user', class: 'edit_user', local: true do |f| %>
+<%= form_with model: @user, url: user_path, method: :patch, id: 'edit_user', class: 'edit_user', local: true do |f| %>
   <%= render 'layouts/error_messages', model: f.object %>
 
   <div class="field">

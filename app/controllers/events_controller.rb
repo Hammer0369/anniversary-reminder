@@ -33,7 +33,6 @@ class EventsController < ApplicationController
       render :edit
     end
   end
-
 end
 
 private
@@ -49,5 +48,5 @@ def set_event
 end
 
 def move_out_of_user
-  redirect_to root_path unless current_user.id == @event.user.id 
+  redirect_to root_path unless current_user.id == @event.user.id
 end

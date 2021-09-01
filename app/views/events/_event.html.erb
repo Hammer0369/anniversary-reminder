@@ -1,53 +1,54 @@
 <% @events.each do |event| %>
   <% if current_user.id == event.user_id %>
-  <ul>
-    <li class='list'>
+    <ul>
+      <li class='list'>
+        <%= link_to event_path(event.id) do %>
 
-      <div class=''>
-        <h6 class=''>
-          <%= event.last_name_kana %> <%= event.first_name_kana %>
-        </h6>
+        <div class=''>
+          <h6 class=''>
+            <%= event.last_name_kana %> <%= event.first_name_kana %>
+          </h6>
+        </div>
+
+        <div class=''>
+          <h3 class=''>
+            <%= event.last_name %> <%= event.first_name %>
+          </h3>
       </div>
 
-      <div class=''>
-        <h3 class=''>
-          <%= event.last_name %> <%= event.first_name %>
-        </h3>
-      </div>
-
-      <div class=''>
-        <h4 class=''>
-        <% if event.category_id == 2 %>
-          誕生日
-        <% elsif event.category_id == 3 %>
-          結婚記念日
-        <% elsif event.category_id == 4 %>
-          交際開始日
-        <% elsif event.category_id == 5 %>
-          <% if event.anniversary_name.present? %>
-            <%= event.anniversary_name %>
-          <% else %>
-            その他の記念日
+        <div class=''>
+          <h4 class=''>
+          <% if event.category_id == 2 %>
+            誕生日
+          <% elsif event.category_id == 3 %>
+            結婚記念日
+          <% elsif event.category_id == 4 %>
+            交際開始日
+          <% elsif event.category_id == 5 %>
+            <% if event.anniversary_name.present? %>
+              <%= event.anniversary_name %>
+            <% else %>
+              その他の記念日
+            <% end %>
           <% end %>
-        <% end %>
-          <%= event.anniversary_date.year %>年
-          <%= event.anniversary_date.month %>月
-          <%= event.anniversary_date.day %>日
-        </h4>
-      </div>
+            <%= event.anniversary_date.year %>年
+            <%= event.anniversary_date.month %>月
+            <%= event.anniversary_date.day %>日
+          </h4>
+        </div>
 
-      <div class=''>
-        <h4 class=''>
-        <% if event.category_id == 2 %>
-          次回で<%#= (Date.today.strftime("%Y%m%d").to_i – Date.parse(event.anniversary_date).strftime("%Y%m%d").to_i) / 10000  %>歳の誕生日
-        <% else %>
-          次回で<%#= (Date.today.strftime("%Y%m%d").to_i – Date.parse(event.anniversary_date).strftime("%Y%m%d").to_i) / 10000  %>回目の記念日
-        <% end %>
-        </h4>
-      </div>
+        <div class=''>
+          <h4 class=''>
+          <% if event.category_id == 2 %>
+            次回で<%#= (Date.today.strftime("%Y%m%d").to_i – Date.parse(event.anniversary_date).strftime("%Y%m%d").to_i) / 10000  %>歳の誕生日
+          <% else %>
+            次回で<%#= (Date.today.strftime("%Y%m%d").to_i – Date.parse(event.anniversary_date).strftime("%Y%m%d").to_i) / 10000  %>回目の記念日
+          <% end %>
+          </h4>
+        </div>
 
-      <%# end %>
-    </li>
-  </ul>
+        <% end %>
+      </li>
+    </ul>
   <% end %>
 <% end %>

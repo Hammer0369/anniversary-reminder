@@ -38,7 +38,6 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to root_path
   end
-
 end
 
 private

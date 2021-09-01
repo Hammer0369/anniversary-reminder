@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :gender, :category, :user 
+  belongs_to :gender
+  belongs_to :category
+  belongs_to :user
 
   with_options presence: true do
     validates :last_name, :first_name,

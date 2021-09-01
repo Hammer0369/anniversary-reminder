@@ -33,6 +33,11 @@ class EventsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @event.destroy
+    redirect_to root_path
+  end
 end
 
 private

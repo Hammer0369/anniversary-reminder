@@ -32,7 +32,7 @@
         <div class=''>
           <h4 class=''>
           <% if event.category_id == 2 %>
-            次回で<%#= (Date.today.strftime("%Y%m%d").to_i – Date.parse(event.anniversary_date).strftime("%Y%m%d").to_i) / 10000  %>歳の誕生日
+            次回で<%= anniversary_times_calc %>歳の誕生日
           <% else %>
             次回で<%#= (Date.today.strftime("%Y%m%d").to_i – Date.parse(event.anniversary_date).strftime("%Y%m%d").to_i) / 10000  %>回目の記念日
           <% end %>

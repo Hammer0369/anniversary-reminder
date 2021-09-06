@@ -1,9 +1,8 @@
 class AnniversaryCounterService
-  require 'happybirthday'
 
-birthday = Happybirthday.born_on('2000-01-01')
-birthday.age.years_olddef
- 
-  end
+  def anniversary_times_calc
+    require 'happybirthday'
+    birthday = Happybirthday.born_on(event.anniversary_date)
+    @birthday.age.years_old
   end
 end
